@@ -1,0 +1,7 @@
+print("Hello it's me")
+print("Hello it's me "*3)
+print(10+3)
+print(10-3)
+print(10*3)
+print(10/3)
+print(10%3)

@@ -55,7 +55,7 @@
 # score=int(input("점수를 입력하세요"))
 # if score>=70 : print("합격")
 # elif score>=60 : print("재시험")
-# else : print("불합격")
+# else : print("불합격") aespa
 
 score=int(input("점수를 입력하세요 "))
 if score>=90 : print("A")

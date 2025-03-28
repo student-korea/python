@@ -17,3 +17,5 @@ print("-"*50)
 print(f"도전 횟수 : {n}")
 print(f"도전 번호 : {num}")
 print(f"랜덤 번호 : {ran_num}")
+
+#drama

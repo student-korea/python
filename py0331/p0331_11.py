@@ -20,7 +20,7 @@ while True:
     num1 = int(input("X좌표를 입력하세요.>>"))
     if num1>4 or num1 <0: num1 = int(input("X좌표를 다시 입력하세요.>>"))
     num2 = int(input("Y좌표를 입력하세요.>>"))
-    if num2>4 or num2 <0: num2 = int(input("X좌표를 다시 입력하세요.>>"))
+    if num2>4 or num2 <0: num2 = int(input("Y좌표를 다시 입력하세요.>>"))
     a_list[num2][num1]= "X"
     
             

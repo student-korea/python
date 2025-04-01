@@ -22,8 +22,12 @@ while True:
         print()
     print()
     num = int(input("숫자를 입력하세요.>> "))
+    stop = 0
     for i in range(5):
         for j in range(5):
             if a_list[i][j] == num:
                 a_list[i][j] = "X"
+                stop = 1
+                break
+        if stop == 1: break
     

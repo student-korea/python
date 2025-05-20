@@ -32,5 +32,12 @@ def stu_input():
         students.add(Student(name,*score))
         print(f"{name} 학생이 등록되었습니다.")
         print()
-        
+
+def stu_output():
+    print("[학생성적 출력]")
+    print('-'*60)
+    print("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(*title))
+    print('-'*60)
+    for s in students.students:
+        print(f"{s.no}\t{s.name}\t{s.kor}\t{s.eng}\t{s.math}\t{s.total}\t{s.avg:.2f}\t{s.rank}\t")  
         

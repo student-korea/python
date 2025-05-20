@@ -44,29 +44,79 @@ for s in deck:
 print(my_cardhand)
 print(you_cardhand)
 count = 0
-
+best_my = []
+best_your = []
 for s in reversed(number):
     for i in my_cardhand:
         if isinstance(s, str):
             if s == f"{i['number']}":
-                print(f"가장 큰 카드: {s}")
-                count += 1
+                print(f"너의 가장 큰 카드: {i['shape']} {i['number']}")
+                best_my.append(i['shape'])
+                best_my.append(i['number'])
+                count+=1
                 break
-        elif isinstance(s, int): 
-            print(f"가장 큰 카드: {s}")
-            count += 1
-            break
-    if count==1:
+        elif isinstance(s, int):
+            if s == i['number']: 
+                print(f"너의 가장 큰 카드: {i['shape']} {i['number']}")
+                count+=1
+                best_my.append(i['shape'])
+                best_my.append(i['number'])
+                break
+    if count == 1:
         break
-                
-
-
-
-
-
-
-
-
+count = 0
+for s in reversed(number):
+    for i in you_cardhand:
+        if isinstance(s, str):
+            if s == f"{i['number']}":
+                print(f"나의 가장 큰 카드: {i['shape']} {i['number']}")
+                best_your.append(i['shape'])
+                best_your.append(i['number'])
+                count+=1
+                break
+        elif isinstance(s, int):
+            if s == i['number']: 
+                print(f"나의 가장 큰 카드: {i['shape']} {i['number']}")
+                count+=1
+                best_your.append(i['shape'])
+                best_your.append(i['number'])
+                break
+    if count == 1:
+        break
+my_count = 0
+your_count = 0
+for s in reversed(number):
+    if isinstance(s,str):
+        if s == f"{best_my[1]}":
+            my_count+=1
+        elif s == f"{best_your[1]}":
+            your_count+=1
+    elif isinstance(s,int):
+        if s == best_my[0]:
+            my_count+=1
+        elif s == best_your[0]:
+            your_count+=1
+    if my_count < your_count: 
+        print("너의 승리")
+        break
+    elif my_count > your_count: 
+        print("나의 승리")
+        break
+    elif my_count >=1 and your_count>=1 and(my_count == your_count):
+        for ss in reversed(shape):
+            if s == f"{best_my[0]}":
+                my_count+=1
+            elif s == f"{best_your[0]}":
+                your_count+=1
+            if my_count < your_count: 
+                print("너의 승리")
+                break
+            elif my_count > your_count: 
+                print("나의 승리")
+                break
+    if my_count >=2:
+        break
+    
 
 # for s in deck:
 #     print(s['shape'],s['number'])

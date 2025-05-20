@@ -3,7 +3,6 @@ students = [
     {"no":2,"name":"Hina","kor":70,"eng":90,"math":90,"total":250,"avg":83.33,"rank":3},
     {"no":3,"name":"Casper","kor":100,"eng":90,"math":80,"total":270,"avg":90,"rank":2},
 ]
-print(students[0])
 count = 4
 title =['번호','이름','국어','영어','수학','합계','평균','등수']
 while True:
